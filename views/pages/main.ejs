@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS CDN
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	-->
+	    <!-- Bootstrap npm 
+	    <link href="./css/bootstrap.min.css" rel = "stylesheet">
+	-->
+	    <!-- Bootwatch -->
+	    <link href="./css/bootstrap.min.css" rel = "stylesheet">
+	    <link href="./c_css/home.css" rel = "stylesheet">
+        <title>Ejs_Home</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">This is EJS Home page</h1>
+                <h2 class="fw-bolder">Welcome <%=text.name%></h2>
+            </div>
+        </header>
+
+       <!-- About section-->
+        <section id="about">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Web App Development</h2>
+                        <p class="lead">Various Tools of web development</p>
+                        <ul>
+                            <% text.tools.forEach((item)=>{%>
+                            <li><%=item %></li>
+                            <%});%>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- js bootstrap -->
+	<script src = "./js/bootstrap.min.js"></script>
+	<script src = "./js/jquery.min.js"></script>
+    </body>
+</html>
